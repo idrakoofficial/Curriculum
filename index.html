@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Dario Didaj — AI Director, Cinematic Storyteller & Digital Marketing Specialist. Crafting impossible worlds through artificial intelligence." />
+<meta property="og:title" content="Dario Didaj — AI Director" />
+<meta property="og:description" content="Where imagination meets artificial intelligence." />
+<meta property="og:image" content="assets/idrako-logo.jpg" />
+<title>Dario Didaj — AI Director · Cinematic Storyteller</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="assets/idrako-logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ====== CUSTOM CURSOR ====== -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ====== ATMOSPHERIC BACKGROUND ====== -->
+<div class="bg-layer">
+  <div class="bg-grid"></div>
+  <div class="bg-vignette"></div>
+  <canvas id="particles"></canvas>
+</div>
+
+<!-- ====== LOADING SCREEN ====== -->
+<div class="loader" id="loader">
+  <div class="loader-logo">
+    <img src="assets/idrako-logo.png" alt="Idrako">
+  </div>
+  <div class="loader-text" data-i18n="loading">SUMMONING THE DRAGON</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- ====== TOP NAV ====== -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">
+    <div class="nav-logo-mark">D</div>
+    <div class="nav-name">DARIO DIDAJ</div>
+  </div>
+  <div class="nav-links">
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#skills" data-i18n="nav_skills">Skills</a>
+    <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+    <a href="#experience" data-i18n="nav_experience">Experience</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+  </div>
+  <div class="lang-switch">
+    <button class="lang-btn active" data-lang="it">IT</button>
+    <span class="lang-divider">/</span>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="assets/idrako-logo.jpg" alt="" class="hero-dragon">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="dot"></span>
+      <span data-i18n="hero_tag">AI DIRECTOR · CINEMATIC STORYTELLER · MILANO</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="title-line line-1">DARIO</span>
+      <span class="title-line line-2">DIDAJ</span>
+    </h1>
+
+    <p class="hero-tagline" data-i18n="hero_tagline">
+      Where imagination meets artificial intelligence.<br>
+      <span class="accent" data-i18n="hero_tagline_2">I craft impossible worlds.</span>
+    </p>
+
+    <div class="hero-cta">
+      <a href="#portfolio" class="btn btn-primary">
+        <span data-i18n="hero_cta_1">Watch the Work</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta_2">Get in Touch</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num" data-target="9">0</div>
+        <div class="stat-label" data-i18n="stat_1">AI Tools<br>Mastered</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num" data-target="3">0</div>
+        <div class="stat-label" data-i18n="stat_2">Languages<br>Spoken</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label" data-i18n="stat_3">Cinematic<br>Vision</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span data-i18n="scroll">SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="about" id="about">
+  <div class="section-label">
+    <span class="num">01</span>
+    <span class="line"></span>
+    <span class="label" data-i18n="sec_about">ABOUT</span>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-photo">
+      <div class="photo-frame">
+        <img src="assets/dario-profile.jpg" alt="Dario Didaj">
+        <div class="photo-glow"></div>
+        <div class="photo-corner tl"></div>
+        <div class="photo-corner tr"></div>
+        <div class="photo-corner bl"></div>
+        <div class="photo-corner br"></div>
+      </div>
+      <div class="photo-meta">
+        <div class="meta-row"><span data-i18n="meta_name">NAME</span><strong>DARIO DIDAJ</strong></div>
+        <div class="meta-row"><span data-i18n="meta_role">ROLE</span><strong>AI DIRECTOR</strong></div>
+        <div class="meta-row"><span data-i18n="meta_loc">LOCATION</span><strong>MONZA · MILANO</strong></div>
+        <div class="meta-row"><span data-i18n="meta_status">STATUS</span><strong class="online"><span class="online-dot"></span>AVAILABLE</strong></div>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h2 class="about-title" data-i18n="about_title">
+        I don't just make videos.<br>
+        <span class="text-gradient">I direct the impossible.</span>
+      </h2>
+
+      <p data-i18n="about_p1">
+        I'm a <strong>Digital Marketing student</strong> and <strong>AI Director</strong> with a deep passion for cinematic storytelling and visual creation. I blend creativity with cutting-edge artificial intelligence to produce music videos, brand films, and audiovisual experiences that feel taken from another dimension.
+      </p>
+      <p data-i18n="about_p2">
+        From the icy realms of <strong>Idrako</strong> — my AI music project — to commercial work in the luxury automotive sector, I work where art and technology collide. Every project is a chance to push what's possible.
+      </p>
+
+      <div class="about-tags">
+        <span>AI Director</span>
+        <span>Cinematic Video</span>
+        <span>Music Production</span>
+        <span>Graphic Design</span>
+        <span>Digital Marketing</span>
+        <span>Storytelling</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SKILLS ====== -->
+<section class="skills" id="skills">
+  <div class="section-label">
+    <span class="num">02</span>
+    <span class="line"></span>
+    <span class="label" data-i18n="sec_skills">ARSENAL</span>
+  </div>
+
+  <h2 class="section-title">
+    <span data-i18n="skills_title_1">The tools that</span>
+    <span class="text-gradient" data-i18n="skills_title_2">build the impossible.</span>
+  </h2>
+
+  <div class="skills-grid">
+    <!-- AI Stack -->
+    <div class="skill-block">
+      <div class="block-header">
+        <div class="block-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v20M4 7l8 5 8-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div>
+          <h3>AI STACK</h3>
+          <p data-i18n="ai_subtitle">Artificial Intelligence tools</p>
+        </div>
+      </div>
+
+      <div class="skill-list">
+        <div class="skill-item" data-level="98">
+          <div class="skill-row">
+            <span class="skill-name">Higgsfield AI</span>
+            <span class="skill-pct">98%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:98%"></div></div>
+          <p class="skill-desc" data-i18n="hf_desc">Cinematic video generation · Marketing Studio</p>
+        </div>
+        <div class="skill-item" data-level="95">
+          <div class="skill-row"><span class="skill-name">Claude Pro</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+          <p class="skill-desc" data-i18n="claude_desc">Creative direction · Code · Strategy</p>
+        </div>
+        <div class="skill-item" data-level="93">
+          <div class="skill-row"><span class="skill-name">Suno</span><span class="skill-pct">93%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:93%"></div></div>
+          <p class="skill-desc" data-i18n="suno_desc">AI music composition for Idrako project</p>
+        </div>
+        <div class="skill-item" data-level="90">
+          <div class="skill-row"><span class="skill-name">Seedance</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+          <p class="skill-desc" data-i18n="seed_desc">Reference-driven video generation</p>
+        </div>
+        <div class="skill-item" data-level="88">
+          <div class="skill-row"><span class="skill-name">Kling</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+          <p class="skill-desc" data-i18n="kling_desc">Multi-shot cinematic sequences</p>
+        </div>
+        <div class="skill-item" data-level="92">
+          <div class="skill-row"><span class="skill-name">Nano Banana</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+          <p class="skill-desc" data-i18n="nano_desc">High-fidelity image generation</p>
+        </div>
+        <div class="skill-item" data-level="90">
+          <div class="skill-row"><span class="skill-name">Midjourney</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+          <p class="skill-desc" data-i18n="mj_desc">Concept art · Visual moodboards</p>
+        </div>
+        <div class="skill-item" data-level="95">
+          <div class="skill-row"><span class="skill-name">ChatGPT</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+          <p class="skill-desc" data-i18n="gpt_desc">Prompt engineering · Content strategy</p>
+        </div>
+        <div class="skill-item" data-level="85">
+          <div class="skill-row"><span class="skill-name">Hailuo · Sora · Krea · Lovable · HeyGen · ElevenLabs</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          <p class="skill-desc" data-i18n="other_desc">Specialized tools for every creative need</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graphic Design Stack -->
+    <div class="skill-block">
+      <div class="block-header">
+        <div class="block-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 3l18 18M3 21L21 3M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div>
+          <h3>DESIGN STACK</h3>
+          <p data-i18n="design_subtitle">Graphic Design & Editing tools</p>
+        </div>
+      </div>
+
+      <div class="skill-list">
+        <div class="skill-item" data-level="95">
+          <div class="skill-row"><span class="skill-name">CapCut</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+          <p class="skill-desc" data-i18n="cc_desc">Fast-turn social-ready video editing</p>
+        </div>
+        <div class="skill-item" data-level="93">
+          <div class="skill-row"><span class="skill-name">Canva Pro</span><span class="skill-pct">93%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:93%"></div></div>
+          <p class="skill-desc" data-i18n="canva_desc">Brand assets · Social design · Templates</p>
+        </div>
+        <div class="skill-item" data-level="85">
+          <div class="skill-row"><span class="skill-name">Figma</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          <p class="skill-desc" data-i18n="figma_desc">UI/UX design · Prototyping</p>
+        </div>
+        <div class="skill-item" data-level="88">
+          <div class="skill-row"><span class="skill-name">Adobe Photoshop</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+          <p class="skill-desc" data-i18n="ps_desc">Photo editing · Compositing · Retouching</p>
+        </div>
+        <div class="skill-item" data-level="80">
+          <div class="skill-row"><span class="skill-name">Adobe Premiere</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+          <p class="skill-desc" data-i18n="pr_desc">Professional video editing & post-production</p>
+        </div>
+        <div class="skill-item" data-level="82">
+          <div class="skill-row"><span class="skill-name">Adobe Illustrator</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+          <p class="skill-desc" data-i18n="ai_desc">Logo design · Vector illustration</p>
+        </div>
+      </div>
+
+      <div class="languages-block">
+        <h4 data-i18n="lang_title">LANGUAGES</h4>
+        <div class="lang-list">
+          <div class="lang-item">
+            <span class="flag">🇮🇹</span>
+            <div>
+              <strong>Italiano</strong>
+              <span data-i18n="lang_native">Native speaker</span>
+            </div>
+          </div>
+          <div class="lang-item">
+            <span class="flag">🇦🇱</span>
+            <div>
+              <strong>Shqip</strong>
+              <span data-i18n="lang_native2">Native speaker</span>
+            </div>
+          </div>
+          <div class="lang-item">
+            <span class="flag">🇬🇧</span>
+            <div>
+              <strong>English</strong>
+              <span data-i18n="lang_good">Good · B2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Soft Skills -->
+  <div class="soft-skills">
+    <h3 data-i18n="soft_title">SOFT SKILLS</h3>
+    <div class="soft-grid">
+      <div class="soft-card"><span data-i18n="soft_1">Problem Solving</span></div>
+      <div class="soft-card"><span data-i18n="soft_2">Multitasking</span></div>
+      <div class="soft-card"><span data-i18n="soft_3">Teamworking</span></div>
+      <div class="soft-card"><span data-i18n="soft_4">Deadline-Driven</span></div>
+      <div class="soft-card"><span data-i18n="soft_5">Creative Vision</span></div>
+      <div class="soft-card"><span data-i18n="soft_6">Adaptability</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PORTFOLIO ====== -->
+<section class="portfolio" id="portfolio">
+  <div class="section-label">
+    <span class="num">03</span>
+    <span class="line"></span>
+    <span class="label" data-i18n="sec_portfolio">PORTFOLIO</span>
+  </div>
+
+  <h2 class="section-title">
+    <span data-i18n="port_title_1">Selected works from</span>
+    <span class="text-gradient" data-i18n="port_title_2">the Idrako universe.</span>
+  </h2>
+
+  <!-- Portfolio Tabs -->
+  <div class="port-tabs">
+    <button class="port-tab active" data-tab="music">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span data-i18n="tab_music">Music Videos</span>
+    </button>
+    <button class="port-tab" data-tab="cinematic">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M2 6h20v12H2zM6 6v12M18 6v12M2 12h4M18 12h4M6 9h12M6 15h12" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span data-i18n="tab_cinematic">Cinematic Reels</span>
+    </button>
+    <button class="port-tab" data-tab="commercial">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span data-i18n="tab_commercial">Commercial Work</span>
+    </button>
+  </div>
+
+  <!-- Music Videos Tab -->
+  <div class="port-content active" data-content="music">
+    <div class="video-grid">
+      <div class="video-card featured">
+        <div class="video-tag" data-i18n="latest">LATEST RELEASE</div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/J7JoRp3dD6Q" title="Idrako Music Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-meta">
+            <span class="video-channel">
+              <img src="assets/idrako-logo.png" alt="">
+              IDRAKO.OFFICIAL
+            </span>
+            <span class="video-type" data-i18n="type_music">AI Music Video</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=J7JoRp3dD6Q" target="_blank" class="video-link">
+            <span data-i18n="watch_yt">Watch on YouTube</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="video-card featured">
+        <div class="video-tag" data-i18n="latest">LATEST RELEASE</div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/8O-IRID-HiE" title="Idrako Music Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-meta">
+            <span class="video-channel">
+              <img src="assets/idrako-logo.png" alt="">
+              IDRAKO.OFFICIAL
+            </span>
+            <span class="video-type" data-i18n="type_music">AI Music Video</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=8O-IRID-HiE" target="_blank" class="video-link">
+            <span data-i18n="watch_yt">Watch on YouTube</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="port-cta">
+      <a href="https://www.youtube.com/@Idrako.official" target="_blank" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        <span data-i18n="all_videos">All Idrako Videos</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Cinematic Reels Tab -->
+  <div class="port-content" data-content="cinematic">
+    <div class="placeholder-grid">
+      <div class="placeholder-card">
+        <div class="placeholder-visual">
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M2 6h20v12H2zM6 6v12M18 6v12" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="placeholder-shimmer"></div>
+        </div>
+        <div class="placeholder-info">
+          <h4 data-i18n="reel_1_title">Cinematic Reel · Vol. 01</h4>
+          <p data-i18n="reel_1_desc">Showreel of cinematic AI sequences. Coming soon to YouTube as unlisted upload.</p>
+          <div class="placeholder-status">
+            <span class="status-dot pending"></span>
+            <span data-i18n="status_upload">PENDING UPLOAD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card">
+        <div class="placeholder-visual">
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="placeholder-shimmer"></div>
+        </div>
+        <div class="placeholder-info">
+          <h4 data-i18n="reel_2_title">AI Director Showcase</h4>
+          <p data-i18n="reel_2_desc">Selection of personal experimental work — fantasy, sci-fi & abstract worlds.</p>
+          <div class="placeholder-status">
+            <span class="status-dot pending"></span>
+            <span data-i18n="status_upload">PENDING UPLOAD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card">
+        <div class="placeholder-visual">
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+          </div>
+          <div class="placeholder-shimmer"></div>
+        </div>
+        <div class="placeholder-info">
+          <h4 data-i18n="reel_3_title">Behind the Magic</h4>
+          <p data-i18n="reel_3_desc">Process videos showing how AI worlds are built from prompt to final cut.</p>
+          <div class="placeholder-status">
+            <span class="status-dot pending"></span>
+            <span data-i18n="status_upload">PENDING UPLOAD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="port-note">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <p data-i18n="port_note">More cinematic work will be uploaded as unlisted YouTube videos and embedded here. Stay tuned.</p>
+    </div>
+  </div>
+
+  <!-- Commercial Tab -->
+  <div class="port-content" data-content="commercial">
+    <div class="commercial-grid">
+      <div class="comm-card">
+        <div class="comm-header">
+          <div class="comm-badge">CLIENT</div>
+          <h3>Fast Wheels</h3>
+        </div>
+        <p class="comm-role" data-i18n="fw_role">Graphic Designer</p>
+        <p class="comm-desc" data-i18n="fw_desc">Communication Agency specialized in events and promotions in the luxury automotive sector. Designed visual assets for high-end automotive events and brand campaigns.</p>
+        <div class="comm-tags">
+          <span data-i18n="tag_luxury">Luxury</span>
+          <span data-i18n="tag_auto">Automotive</span>
+          <span data-i18n="tag_events">Events</span>
+          <span>Graphic Design</span>
+        </div>
+      </div>
+
+      <div class="comm-card">
+        <div class="comm-header">
+          <div class="comm-badge">SAAS</div>
+          <h3>Restaurants Club</h3>
+        </div>
+        <p class="comm-role" data-i18n="rc_role">AI & Marketing Specialist</p>
+        <p class="comm-desc" data-i18n="rc_desc">SaaS platform that helps restaurants automate marketing, management, and communication through artificial intelligence.</p>
+        <div class="comm-tags">
+          <span>SaaS</span>
+          <span>AI Automation</span>
+          <span data-i18n="tag_marketing">Marketing</span>
+          <span data-i18n="tag_horeca">HoReCa</span>
+        </div>
+      </div>
+
+      <div class="comm-card">
+        <div class="comm-header">
+          <div class="comm-badge">STARTUP</div>
+          <h3>Green Jobs · BIKENERGY</h3>
+        </div>
+        <p class="comm-role" data-i18n="gj_role">Co-Founder · Designer</p>
+        <p class="comm-desc" data-i18n="gj_desc">High school start-up creating an eco-sustainable product that converts kinetic energy from bicycle movement into electrical energy.</p>
+        <div class="comm-tags">
+          <span data-i18n="tag_green">Green Tech</span>
+          <span>Startup</span>
+          <span data-i18n="tag_innovation">Innovation</span>
+          <span>Branding</span>
+        </div>
+        <a href="https://www.instagram.com/bikenergy.gj/" target="_blank" class="comm-link">@bikenergy.gj →</a>
+      </div>
+
+      <div class="comm-card featured">
+        <div class="comm-header">
+          <div class="comm-badge accent">FLAGSHIP</div>
+          <h3>Idrako</h3>
+        </div>
+        <p class="comm-role" data-i18n="id_role">Founder · AI Director · Music Producer</p>
+        <p class="comm-desc" data-i18n="id_desc">My personal AI music & video project. Blends creativity and artificial intelligence to produce original songs and audiovisual content with a fantasy-cinematic aesthetic. Distributed across YouTube, Spotify, Instagram, TikTok, X & Threads.</p>
+        <div class="comm-tags">
+          <span data-i18n="tag_aimusic">AI Music</span>
+          <span data-i18n="tag_cinematic">Cinematic</span>
+          <span>Fantasy</span>
+          <span data-i18n="tag_personal">Personal Brand</span>
+        </div>
+        <div class="comm-socials">
+          <a href="https://www.youtube.com/@Idrako.official" target="_blank" title="YouTube">YT</a>
+          <a href="https://open.spotify.com/intl-it/artist/6WNUzAlXw4T6A8kM6XRzPc" target="_blank" title="Spotify">SP</a>
+          <a href="https://www.instagram.com/idrako.official/" target="_blank" title="Instagram">IG</a>
+          <a href="https://www.tiktok.com/@idrako.official" target="_blank" title="TikTok">TT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== EXPERIENCE / EDUCATION ====== -->
+<section class="experience" id="experience">
+  <div class="section-label">
+    <span class="num">04</span>
+    <span class="line"></span>
+    <span class="label" data-i18n="sec_journey">JOURNEY</span>
+  </div>
+
+  <div class="exp-grid">
+    <!-- Education Column -->
+    <div class="exp-col">
+      <h2 class="exp-col-title">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="1.5"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span data-i18n="education">EDUCATION</span>
+      </h2>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2025 — <span data-i18n="present">Present</span></div>
+          <h4 data-i18n="edu_1_title">Bachelor's in Communication & Multimedia</h4>
+          <p class="tl-org">Mercatorum Telematic University</p>
+          <p class="tl-desc" data-i18n="edu_1_desc">Integrative Program. Courses: General Semiotics, Community Management, Visual Arts and New Technologies.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2024 — <span data-i18n="present">Present</span></div>
+          <h4 data-i18n="edu_2_title">Digital Marketing for Made in Italy</h4>
+          <p class="tl-org">Fondazione AMMI · ITS Two-Year Specialization</p>
+          <p class="tl-desc" data-i18n="edu_2_desc">Graphic Design, Multimedia Communication, UX/UI, Social Media, E-commerce.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2025 · <span data-i18n="ongoing">Ongoing</span></div>
+          <h4 data-i18n="edu_3_title">AI Automation Course</h4>
+          <p class="tl-org">Make Academy</p>
+          <p class="tl-desc" data-i18n="edu_3_desc">No-code AI automation, workflow design, Make.com mastery.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2014 — 2019</div>
+          <h4 data-i18n="edu_4_title">High School Diploma · Applied Sciences</h4>
+          <p class="tl-org" data-i18n="edu_4_org">Scientific Lyceum</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Column -->
+    <div class="exp-col">
+      <h2 class="exp-col-title">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span data-i18n="work">WORK EXPERIENCE</span>
+      </h2>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot active"></div>
+          <div class="tl-date">2024 — <span data-i18n="present">Present</span></div>
+          <h4>Idrako · <span class="text-gradient" data-i18n="founder">Founder & AI Director</span></h4>
+          <p class="tl-org" data-i18n="idrako_org">Personal AI Music Project</p>
+          <p class="tl-desc" data-i18n="idrako_work_desc">Founder, music producer, AI director and content strategist for the Idrako brand. From music composition to video direction, full creative ownership.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot active"></div>
+          <div class="tl-date">2024 — <span data-i18n="present">Present</span></div>
+          <h4 data-i18n="rc_position">AI & Marketing Specialist</h4>
+          <p class="tl-org">Restaurants Club</p>
+          <p class="tl-desc" data-i18n="rc_work_desc">SaaS platform helping restaurants automate marketing, management and communication through AI.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2024 — <span data-i18n="present">Present</span></div>
+          <h4 data-i18n="fw_position">Graphic Designer</h4>
+          <p class="tl-org">Fast Wheels · Communication Agency</p>
+          <p class="tl-desc" data-i18n="fw_work_desc">Visual design for the luxury automotive sector — events, brand campaigns, social.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2022 — <span data-i18n="present">Present</span></div>
+          <h4 data-i18n="waiter_position">Waiter</h4>
+          <p class="tl-org">Orso Bruno Restaurant</p>
+          <p class="tl-desc" data-i18n="waiter_desc">Winner of Italian TV show "4 Ristoranti" by Alessandro Borghese. Front-of-house, customer experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== INTERESTS ====== -->
+<section class="interests">
+  <div class="int-grid">
+    <div class="int-card">
+      <div class="int-icon">🎮</div>
+      <h4 data-i18n="int_1">Videogames</h4>
+      <p data-i18n="int_1_desc">Visual storytelling inspiration</p>
+    </div>
+    <div class="int-card">
+      <div class="int-icon">🤖</div>
+      <h4 data-i18n="int_2">Artificial Intelligence</h4>
+      <p data-i18n="int_2_desc">Daily research & experimentation</p>
+    </div>
+    <div class="int-card">
+      <div class="int-icon">💪</div>
+      <h4 data-i18n="int_3">Gym</h4>
+      <p data-i18n="int_3_desc">Discipline & focus</p>
+    </div>
+    <div class="int-card">
+      <div class="int-icon">🎹</div>
+      <h4 data-i18n="int_4">Piano · Guitar</h4>
+      <p data-i18n="int_4_desc">Music as a daily practice</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="contact" id="contact">
+  <div class="section-label">
+    <span class="num">05</span>
+    <span class="line"></span>
+    <span class="label" data-i18n="sec_contact">CONTACT</span>
+  </div>
+
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <h2 class="contact-title">
+        <span data-i18n="contact_title_1">Let's build</span><br>
+        <span class="text-gradient" data-i18n="contact_title_2">something epic.</span>
+      </h2>
+      <p class="contact-sub" data-i18n="contact_sub">
+        Open to collaborations on AI music videos, cinematic content, brand films, full-time digital marketing roles, and AI direction projects.
+      </p>
+
+      <div class="contact-info">
+        <a href="mailto:dariodidaj46@gmail.com" class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div>
+            <span data-i18n="email">EMAIL</span>
+            <strong>dariodidaj46@gmail.com</strong>
+          </div>
+        </a>
+        <a href="tel:+393466725582" class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div>
+            <span data-i18n="phone">PHONE</span>
+            <strong>+39 346 672 5582</strong>
+          </div>
+        </a>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div>
+            <span data-i18n="location">LOCATION</span>
+            <strong>Monza · Milano · Italia</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <h3 class="socials-title" data-i18n="follow_journey">FOLLOW THE JOURNEY</h3>
+      <div class="socials-grid">
+        <a href="https://www.youtube.com/@Idrako.official" target="_blank" class="social-card youtube">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </div>
+          <div class="social-info">
+            <strong>YouTube</strong>
+            <span>@Idrako.official</span>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+
+        <a href="https://www.instagram.com/idrako.official/" target="_blank" class="social-card instagram">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </div>
+          <div class="social-info">
+            <strong>Instagram</strong>
+            <span>@idrako.official</span>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+
+        <a href="https://www.tiktok.com/@idrako.official" target="_blank" class="social-card tiktok">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+          </div>
+          <div class="social-info">
+            <strong>TikTok</strong>
+            <span>@idrako.official</span>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+
+        <a href="https://open.spotify.com/intl-it/artist/6WNUzAlXw4T6A8kM6XRzPc" target="_blank" class="social-card spotify">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          </div>
+          <div class="social-info">
+            <strong>Spotify</strong>
+            <span data-i18n="listen_now">Listen now</span>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+
+        <a href="https://x.com/IdrakoOfficial" target="_blank" class="social-card x">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          <div class="social-info">
+            <strong>X · Twitter</strong>
+            <span>@IdrakoOfficial</span>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+
+        <a href="https://www.threads.com/@idrako.official" target="_blank" class="social-card threads">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.74-1.756-.503-.582-1.279-.876-2.309-.875h-.029c-.825 0-1.947.227-2.66 1.284L7.823 7.166c.955-1.416 2.503-2.225 4.351-2.225h.005c3.353.02 5.391 2.084 5.59 5.687.116.046.231.094.345.142 1.638.706 2.838 1.776 3.47 3.094.882 1.84.964 4.84-1.434 7.18-1.831 1.78-4.054 2.583-7.197 2.605zm1.062-7.551c-.547.03-1.116.012-1.703-.058-1.86-.211-3.16-.954-3.075-1.846.097-1.013 2.044-1.483 3.95-1.27.687.077 1.4.247 2.071.477-.024.058-.043.114-.07.17-.354.881-1.066 1.385-2.075 1.527z"/></svg>
+          </div>
+          <div class="social-info">
+            <strong>Threads</strong>
+            <span>@idrako.official</span>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/dario-didaj/" target="_blank" class="social-card linkedin">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="social-info">
+            <strong>LinkedIn</strong>
+            <span data-i18n="connect">Connect</span>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="footer-content">
+    <div class="footer-mark">
+      <img src="assets/idrako-logo.png" alt="Idrako">
+      <div>
+        <strong>DARIO DIDAJ</strong>
+        <span>AI DIRECTOR · CINEMATIC STORYTELLER</span>
+      </div>
+    </div>
+    <div class="footer-quote">
+      <span data-i18n="footer_quote">"Where imagination meets artificial intelligence."</span>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 Dario Didaj</span>
+      <span data-i18n="footer_made">Designed & built with AI</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
